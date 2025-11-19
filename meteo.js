@@ -34,8 +34,8 @@ function displayWeather(data) {
   document.querySelector("#icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
   document.querySelector("#description").innerText = description
   document.querySelector("#temp").innerText = temp + "°C"
-  document.querySelector("#humidity").innerText = "Humidité: " + humidity + "%"
-  document.querySelector("#wind").innerText = "Vitesse du vent: " + speed + " km/h"
+  document.querySelector("#humidity").innerText = "Humidité : " + humidity + "%"
+  document.querySelector("#wind").innerText = "Vitesse du vent : " + speed + " km/h"
   document.querySelector("#tempExt").innerText = "Maxi : " + tempMax + "°C / Mini : " + tempMin + "°C"
   document.querySelector(".weather").classList.remove("loading");
     }
