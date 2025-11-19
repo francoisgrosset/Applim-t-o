@@ -20,6 +20,7 @@ async function fetchWeather(city) {
 
 //Fonction me permettant de modifier mon html et donc ma page en fonction des informations demandées
 function displayWeather(data) {
+  // Déclaration de toutes mes constantes
   const name = data.name
   const { description,icon } = data.weather[0]
   const humidity = data.main.humidity
@@ -28,6 +29,7 @@ function displayWeather(data) {
   const tempMax = data.main.temp_max
   const tempMin = data.main.temp_min
 
+  //Script pour modifier le HTML
   document.querySelector("#city").innerText = name
   document.querySelector("#icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
   document.querySelector("#description").innerText = description
@@ -38,11 +40,14 @@ function displayWeather(data) {
   document.querySelector(".weather").classList.remove("loading");
     }
 
+// Fonction qui permet de mettre à jour la Météo
 async function updateMeteo() {
   const conf = await fetchConfig();
   await fetchWeather(conf.ville);
 }
 
+// Appel de la fonction pour lancer l'application
 updateMeteo()
 
+// Mise en place d'un refresh des informations toutes les heures
 setInterval(updateMeteo, 3600000)
