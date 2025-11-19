@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Application mété SIMPLON - FRANCOIS GROSSET</title>
-        <script src="./app.js" type="module"></script>
-
-    </head>
-    <body style="background-color: aqua;">
-        <h1 style="text-align: center; color:brown">Application météo</h1>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="meteo.js" defer></script>
+    <title>Météo pour Simplon</title>
+</head>
+<body>
+    <div class="card">
+            <div class="weather loading">
+            <h3 class="Sous-titre">Météo à</h3>
+            <h1 id="city">Niort</h1>
+            <div class="flex">
+                <img src="https://openweathermap.org/img/wn/02n.png" id="icon"></img>
+                <div id="description">Nuageux</div>
+            </div>
+            <h1 id="temp">20°C</h1>
+            <div id="humidity">Humidité: 60%</div>
+            <div id="wind">Vitesse du vent: 6.2 km/h</div>
+            <div id="tempExt">Mini 20°C / Maxi 25°C</div>
+        </div>
+    </div>
+</body>
 </html>
